@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manipulando a DOM</title>
+    <style>
+      body {
+        background: #242424;
+        color: #fafafa;
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="titulo">Conhecendo a DOM</h1>
+    <h2>O que é a DOM?</h2>
+    <p>A DOM significa Document Object Model</p>
+    <p>Traduzindo fica algo como: Modelo de Objeto de Documento</p>
+
+    <p>
+      É basicamente uma representação da página web em forma de árvore, onde
+      cada elemento HTML é um <em>nó(ou node)</em> que podemos acessar e
+      manipular com o JavaScript.
+    </p>
+
+    <h2>Como funciona?</h2>
+    <p>Quando o navegador carrega uma página, acontece o seguinte:</p>
+    <ol>
+      <li>
+        O navegador lê o HTML e cria o
+        <abbr title="Document Object Model">DOM</abbr>
+      </li>
+
+      <li>
+        O JavaScript pode então navegar, alterar, criar ou remover elementos nesse DOM
+      </li>
+
+      <li>O navegador atualiza a página com as mudanças que você fez.</li>
+    </ol>
+
+    <h2>O que dá pra fazer com o DOM?</h2>
+    <ul>
+      <li>Selecionar elementos</li>
+      <li>Ler ou alterar conteúdo</li>
+      <li>Alterar atributos</li>
+      <li>Alterar estilos</li>
+      <li>Criar ou remover elementos</li>
+      <li>Brincar com eventos</li>
+    </ul>
+
+    <button onclick="mudarTexto()">Clique aqui</button>
+
+    <script src="01-basico-da-dom.js"></script>
+  </body>
+</html>

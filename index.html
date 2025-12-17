@@ -23,13 +23,14 @@
               aria-expanded="false"
               aria-controls="menu-principal"
               id="btn-menu"
+              class="btn btn-hidden"
             >
               <i class="fi fi-sr-menu-burger" aria-hidden="true"></i>
             </button>
 
             <ul id="menu-principal" class="menu">
               <li><a href="/">Home</a></li>
-              <li><a href="sobre.html">Sobre</a></li>
+              <li><a href="pages/login.html">Login</a></li>
               <li><a href="contato.html">Contato</a></li>
               <li><a href="servicos.html">Serviços</a></li>
             </ul>
@@ -47,7 +48,7 @@
           <form class="form-todo">
             <label for="tarefa" class="sr-only">Digite a sua tarefa</label>
             <input type="text" id="tarefa" placeholder="Digite a sua tarefa" />
-            
+
             <!-- botão para adicionar tarefa -->
             <button class="btnAdd">
               <span>Adicionar tarefa</span>
@@ -58,10 +59,59 @@
           <!-- lista com itens da lista -->
           <ul class="todo-list"></ul>
         </section>
+
+        <section class="slider" aria-label="Galeria de Imagens">
+          <figure class="slides">
+            <img
+              src="https://images.unsplash.com/photo-1614624532983-4ce03382d63d?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2V0dXB8ZW58MHx8MHx8fDA%3D"
+              alt=""
+              class="active"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1510519138101-570d1dca3d66?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c2V0dXB8ZW58MHx8MHx8fDA%3D"
+              alt=""
+            />
+
+            <img
+              src="https://images.unsplash.com/photo-1626968361222-291e74711449?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c2V0dXB8ZW58MHx8MHx8fDA%3D"
+              alt=""
+            />
+
+            <img
+              src="https://plus.unsplash.com/premium_photo-1683736986776-97b7703bed6d?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHNldHVwfGVufDB8fDB8fHww"
+              alt=""
+            />
+
+            <img
+              src="https://images.unsplash.com/photo-1616763355548-1b606f439f86?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHNldHVwfGVufDB8fDB8fHww"
+              alt=""
+            />
+
+            <img
+              src="https://images.unsplash.com/photo-1621743018966-29194999d736?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHNldHVwfGVufDB8fDB8fHww"
+              alt=""
+            />
+          </figure>
+
+          <nav aria-label="Controles do slider" class="slider-controls">
+            <button aria-label="Imagem anterior" class="btn btn-prev">
+              <i class="fi fi-sr-angle-small-left" aria-hidden="true"></i>
+            </button>
+
+            <button aria-label="Próxima Imagem" class="btn btn-next">
+              <i class="fi fi-sr-angle-small-right" aria-hidden="true"></i>
+            </button>
+          </nav>
+        </section>
       </div>
     </main>
 
+    <footer>
+      <p>&copy;2025 - Dev</p>
+    </footer>
+
     <script src="js/menu-hamburguer.js"></script>
     <script src="js/todo-list.js"></script>
+    <script src="slider-img.js"></script>
   </body>
 </html>

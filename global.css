@@ -27,6 +27,12 @@ a {
   color: #fafafa;
 }
 
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
 .container {
   width: 100%;
   height: 100%;
@@ -67,8 +73,6 @@ nav {
 }
 
 .btn {
-  border: none;
-
   height: 3rem;
   width: 3rem;
 
@@ -78,8 +82,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  cursor: pointer;
 }
 
 .btn:hover {
@@ -131,6 +133,11 @@ main {
   margin: 0.25rem;
 }
 
+section:not(section:first-child) {
+  padding: 1.5rem 0;
+  border-top: 1px solid #fafafa30;
+}
+
 /* Estilos ToDo List - Ínicio */
 .todo-list-container {
   border: 1px solid #fafafa10;
@@ -169,7 +176,6 @@ main {
   font-size: 1rem;
 }
 .form-todo button {
-  cursor: pointer;
   font-size: 1rem;
   font-weight: 600;
 
@@ -308,6 +314,51 @@ footer {
 }
 .form-login button:hover {
   background: #7f116b;
+}
+
+.btn-logout {
+  border: none;
+  color: #fafafa;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #ff0000;
+  width: 100%;
+  max-width: 10rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+}
+/* Estilos Form Login - Fim */
+
+/* Estilos Faq - Ínicio */
+.faq h2 {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  position: relative;
+}
+
+.faq h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.5rem;
+  width: 20%;
+  height: 0.25rem;
+  background-color: #2ff9d7ac;
+}
+
+.faq-item button {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  font-size: clamp(0.875rem, 3vw, 1.25rem);
+  font-weight: 600;
+  background-color: #fff;
 }
 
 @media screen and (min-width: 780px) {

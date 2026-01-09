@@ -1,6 +1,7 @@
 /*Selecionar/capturar elementos*/
 const btnMenu = document.getElementById("btn-menu");
 const listaMenu = document.querySelector("#menu-principal");
+const menuLinks = document.querySelectorAll("#menu-principal a");
 const iconeBtnMenu = document.querySelector("i");
 
 /* Adicionar eventos(ou seja, observar ações do usuário) */
@@ -24,6 +25,13 @@ btnMenu.addEventListener("click", function () {
   }
 });
 
-// Alterar estilos
-// listaMenu.style.display = "block";
-// listaMenu.style.backgroundColor = "red";
+const path = window.location.pathname;
+const page = path.split("/").pop().split(".")[0];
+
+menuLinks.forEach((link) => {
+  const href = link.getAttribute("href");
+  const hrefPage = href.split("/").pop().split(".")[0];
+  if (hrefPage === page || (hrefPage === "" && page === "")) {
+    link.classList.add("ativoLink");
+  }
+});

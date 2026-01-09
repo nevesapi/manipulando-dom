@@ -45,11 +45,11 @@ window.addEventListener("load", () => {
   if (logado === "true") {
     infoMensagem("Usuário já está logado", "green");
     // redirecionando o usuário para a página inicial
-    // window.location.href = "/index.html";
+    // window.location.href = "/";
 
     const btnLogout = document.createElement("button");
     btnLogout.classList.add("btn-logout");
-    btnLogout.innerHTML = "Sair";
+    btnLogout.innerHTML = "Logout";
     // section.appendChild(btnLogout)
 
     btnLogout.addEventListener("click", function () {

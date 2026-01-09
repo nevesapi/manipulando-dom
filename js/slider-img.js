@@ -27,5 +27,4 @@ btnPrev.addEventListener("click", () => {
   // + imagem.length = Garante que o valor de index nunca seja negativo
 });
 
-console.log(imagens);
 mostrarImagens(4);

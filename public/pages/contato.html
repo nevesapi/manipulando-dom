@@ -50,10 +50,20 @@
             incrivel
           </p>
 
-          <form action="" class="form-contato" id="form-contato">
+          <form
+            action="https://formspree.io/f/mykkgwab"
+            class="form-contato"
+            method="POST"
+            id="form-contato"
+          >
             <div class="input-container">
               <label for="name">Nome</label>
-              <input type="name" id="name" placeholder="Digite seu nome" />
+              <input
+                type="text"
+                id="name"
+                placeholder="Digite seu nome"
+                name="name"
+              />
             </div>
 
             <div class="input-container">
@@ -62,6 +72,7 @@
                 type="email"
                 id="email"
                 placeholder="exemplo@exemplo.com"
+                name="email"
               />
             </div>
 
@@ -74,26 +85,48 @@
                   maxlength="9"
                   id="cep"
                   placeholder="00000-000"
+                  name="cep"
                 />
               </div>
 
-              <button id="buscarCep">Buscar Cep</button>
+              <button type="button" id="buscarCep">Buscar Cep</button>
             </div>
 
             <div class="endereco" id="endereco">
               <div class="input-container">
                 <label for="rua">Rua</label>
-                <input type="text" id="rua" placeholder="Rua ali" />
+                <input type="text" id="rua" placeholder="Rua ali" name="rua" />
               </div>
 
               <div class="input-container">
                 <label for="bairro">bairro</label>
-                <input type="text" id="bairro" placeholder="Ali" />
+                <input
+                  type="text"
+                  id="bairro"
+                  placeholder="Ali"
+                  name="bairro"
+                />
               </div>
 
               <div class="input-container">
                 <label for="estado">Estado</label>
-                <input type="text" id="estado" placeholder="São Paulo" />
+                <input
+                  type="text"
+                  id="estado"
+                  placeholder="São Paulo"
+                  name="estado"
+                />
+              </div>
+
+              <div class="input-container">
+                <label for="message">Mensagem</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  cols="25"
+                  rows="10"
+                  placeholder="Digite a sua mensagem aqui..."
+                ></textarea>
               </div>
             </div>
 
@@ -109,7 +142,7 @@
       <p>&copy;2025 - Dev</p>
     </footer>
 
-    <script src="../js/menu-hamburguer.js"></script>
-    <script src="../js/form-contato.js"></script>
+    <script src="../js/components/menu-hamburguer.js"></script>
+    <script src="../js/components/forms/form-contato.js"></script>
   </body>
 </html>

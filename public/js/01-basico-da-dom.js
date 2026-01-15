@@ -6,5 +6,4 @@ function mudarTexto() {
   // titulo.innerText = "Olá, você clicou no botão!";
   // titulo.textContent = "Olá, você clicou no botão!";
   titulo.innerHTML = "Olá, você clicou no botão!";
-
 }

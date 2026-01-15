@@ -1,37 +1,43 @@
 :root {
   /*  base colors  */
-  --color-bg-main: #121212;
-  --color-bg-dark: #000000;
   --color-bg-dark-transparent: #00000093;
   --color-bg-secondary: #1a1a1a;
+  --color-bg-main: #121212;
+  --color-bg-dark: #000000;
 
-  --color-text-main: #fafafa;
   --color-text-secondary: #ebebef;
+  --color-text-main: #fafafa;
 
   /* brand / accent  */
-  --color-primary: #c508a2;
   --color-primary-dark: #550b48;
   --color-primary-mid: #791168;
   --color-primary-alt: #7f116b;
+  --color-primary: #c508a2;
 
   /* bordinhas */
-  --color-border-light: #fafafa30;
   --color-border-lighter: #fafafa10;
+  --color-border-light: #fafafa30;
   --color-border-form: #fafafa38;
 
   /* statinhoss */
-  --color-success: #29907f;
-  --color-danger: #bd0606;
   --color-danger-hover: #ff0000;
   --color-disabled: #989898;
+  --color-success: #29907f;
+  --color-danger: #bd0606;
 
   /* os do faqkkkkk */
-  --color-faq-title: #2ff9d7ac;
   --color-faq-button: #2f8df9ac;
+  --color-faq-title: #2ff9d7ac;
 
   /* não sei de onde saiu */
-  --color-green: green;
   --color-white: #ffffff;
+  --color-green: green;
+}
+
+/* ----- RESET CSS */
+/* Normalize */
+body {
+  margin: 0;
 }
 
 *,
@@ -266,14 +272,30 @@ section:not(section:first-child) {
   text-decoration: line-through;
 }
 
-.slides img {
-  max-width: 100%;
-  display: none;
+.slides {
+  position: relative;
+  overflow: hidden;
+  height: 40rem;
   border-radius: 0.5rem;
 }
 
+.slides img {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
 .slides img.active {
-  display: block;
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 1;
 }
 
 .slider-controls {
@@ -371,7 +393,7 @@ footer {
 }
 
 .faq h2 {
-  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-size: clamp(2rem, 5vw, 3rem);
   position: relative;
 }
 
@@ -422,7 +444,7 @@ footer {
 
 .faq-resposta.ativoFaq {
   max-height: fit-content;
-  padding: 1rem;
+  padding: 1rem 0rem;
 }
 
 .contato {
@@ -432,7 +454,6 @@ footer {
 .contato h2,
 .contato p {
   text-align: center;
-  margin-bottom: 1rem;
 }
 
 .contato h2 {
@@ -441,6 +462,7 @@ footer {
 
 .contato p {
   font-size: clamp(1rem, 5vw, 1.125rem);
+  margin-bottom: 1rem;
 }
 
 .form-contato,
@@ -469,6 +491,14 @@ footer {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   font-size: 1rem;
+}
+
+.form-contato textarea {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: 1.125rem;
+  font-weight: 400;
 }
 
 .input-container {
@@ -523,6 +553,7 @@ footer {
 
 .endereco.ativoEndereco {
   max-height: fit-content;
+  padding: 0.5rem 0;
 }
 
 @media screen and (min-width: 780px) {
